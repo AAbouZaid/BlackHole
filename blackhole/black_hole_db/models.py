@@ -24,7 +24,7 @@ class Host(models.Model):
                   ('WINDOWS', 'Windows'),)
     
     name = models.CharField(max_length=30, unique=True, verbose_name=_("Name"))
-    ip = models.IPAddressField(verbose_name=_("IP Address"))
+    ip = models.CharField(max_length=50,verbose_name=_("IP/Hostname"))
     port = models.PositiveIntegerField(max_length=5, default=22, verbose_name=_("Port"))
     os = models.CharField(max_length=10, choices=OS_CHOICES, default=0, verbose_name=_("Operative System"))
     description = models.CharField(max_length=50, verbose_name=_("Description"))
