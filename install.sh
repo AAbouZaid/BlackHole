@@ -17,7 +17,7 @@ then
     BLACKHOLE_PATH="/opt/BlackHole"
     export INSTALL="$PIP install --upgrade"
     echo "Installing dependencies ..."
-    $INSTALL django
+    $INSTALL django=="1.5"
     $INSTALL paramiko
     $INSTALL urwid
     $INSTALL simplejson
